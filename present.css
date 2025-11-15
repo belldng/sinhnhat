@@ -10,6 +10,7 @@ body {
 @font-face {
   font-family: "arcade";
   src: url(/font/arcade-among-1.ttf) format("truetype");
+  font-weight: normal;
 }
 
 @font-face {
@@ -23,18 +24,8 @@ body {
 }
 
 @font-face {
-  font-family: "Betrayos";
-  src: url(/font/MJ-Betrayos.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Brunette";
-  src: url(/font/SVN-Brunette.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "Motherland";
-  src: url(/font/NVN-Motherland-Signature-1.ttf) format("truetype");
+  font-family: "brunette";
+  src: url(font/SVN-Brunette.otf) format("truetype");
 }
 
 /* Main Image */

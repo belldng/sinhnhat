@@ -15,31 +15,34 @@ body {
   font-weight: normal;
 }
 
-@font-face {
-  font-family: "Brittany";
-  src: url(/font/iCielBrittanySignature-Regular.ttf) format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url(/font/Montserrat-Black.ttf) format("truetype");
-  font-weight: normal;
-}
-
 .container {
   position: relative;
   text-align: center;
 }
 
-/* Trái tim xoay 3D */
+/* Trái tim xuất hiện trước rồi xoay */
 .heart {
   width: 200px;
   height: 200px;
-  animation: spin 3s linear infinite;
+  opacity: 0;
+
+  /* 1) xuất hiện   2) xoay 3D */
+  animation: heartAppear 1s ease-out forwards, spin 3s linear infinite 1s; /* spin bắt đầu sau khi hiện xong */
 }
 
-/* Animation xoay */
+/* Animation xuất hiện mượt */
+@keyframes heartAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation xoay 3D giữ nguyên của bạn */
 @keyframes spin {
   0% {
     transform: rotateY(0deg);
@@ -49,12 +52,29 @@ body {
   }
 }
 
+/* Chữ hiện ra trễ sau trái tim */
 .wish {
   margin-top: 20px;
   font-family: "arcade", sans-serif;
   font-size: 24px;
   color: #893f45;
+
+  opacity: 0;
+  animation: fadeText 1s ease-out forwards;
+  animation-delay: 1.2s; /* chờ trái tim xuất hiện trước */
 }
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .heart {
