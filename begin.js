@@ -24,5 +24,5 @@ document.getElementById("startButton").addEventListener("click", () => {
   localStorage.setItem("musicOK", "true");
 
   // Chuyển sang trang index
-  window.location.href = "index.html";
+  window.location.href = "begin.html";
 });
