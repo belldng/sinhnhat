@@ -3,16 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz | Câu hỏi</title>
-    <link rel="stylesheet" href="begin.css" />
+    <title>Hỏi Nhỏ Anh Nghe Hong..💖</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Nhạc nền -->
+    <audio
+      id="bgMusic"
+      src="nhạc/nom-beneath-the-rain-nom-tunes_167x1w0D.mp3"
+      loop
+    ></audio>
+
     <div id="sparkles"></div>
 
-    <div id="begin-container">
-      <h1>CẬU ĐÃ SẴN SÀNG CHƯA?</h1>
-      <button class="startBtn" id="startButton">Bắt đầu</button>
+    <div id="question-container">
+      <h1 id="question">Cậu trước màn hình cóa yêu pé nhiều hong?</h1>
+      <div id="buttons">
+        <button class="yes" id="yesButton">Yêu nhiều lắm luôn á💖</button>
+        <button class="no" id="noButton">Không yêu đâu😡</button>
+      </div>
+    </div>
+
+    <img src="ảnh/chicken.webp" alt="question image" id="questionImage" />
+
+    <div id="response-container">
+      <p id="responseMessage">
+        Hehe biết mà, pé cũng yêu anh💕. Hôm nay là một ngày đặc biệt ha!😘
+      </p>
+      <img src="ảnh/response.webp" alt="response image" id="responseImage" />
+      <button id="nextPage">Chưa hết âu, tiếp tục nò →</button>
     </div>
   </body>
-  <script src="begin.js"></script>
+  <footer>Pour toi, ma personne spéciale 💌</footer>
+  <script src="script.js"></script>
 </html>
