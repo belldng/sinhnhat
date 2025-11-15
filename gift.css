@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #fff0f5, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "arcade";
+  src: url(/font/arcade-among-1.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Brittany";
+  src: url(/font/iCielBrittanySignature-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/font/Montserrat-Black.ttf) format("truetype");
+  font-weight: normal;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+/* Trái tim xoay 3D */
+.heart {
+  width: 200px;
+  height: 200px;
+  animation: spin 3s linear infinite;
+}
+
+/* Animation xoay */
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.wish {
+  margin-top: 20px;
+  font-family: "arcade", sans-serif;
+  font-size: 24px;
+  color: #893f45;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .heart {
+    width: 80px;
+    height: 80px;
+  }
+}

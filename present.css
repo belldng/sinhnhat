@@ -1,0 +1,149 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(to right, #fff0f5, #fcb69f);
+  overflow-x: hidden;
+}
+
+/* Font faces */
+@font-face {
+  font-family: "arcade";
+  src: url(/font/arcade-among-1.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Brittany";
+  src: url(/font/iCielBrittanySignature-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/font/Montserrat-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Betrayos";
+  src: url(/font/MJ-Betrayos.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Brunette";
+  src: url(/font/SVN-Brunette.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Motherland";
+  src: url(/font/NVN-Motherland-Signature-1.ttf) format("truetype");
+}
+
+/* Main Image */
+img.main-image {
+  width: 80%;
+  max-width: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Subheading */
+h3 {
+  font-family: "montserrat", sans-serif;
+  color: #893f45;
+  margin-top: 20px;
+}
+
+/* Gift Options */
+.gift-options {
+  margin-top: 10px;
+}
+
+.gift-options img {
+  width: 100px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: transparent; /* khung trong suốt */
+  border: none;
+}
+
+.gift-options img:hover {
+  transform: scale(1.1);
+}
+
+/* Message Box – giấy thư */
+.message-text {
+  font-family: "brunette", cursive;
+  color: #893f45;
+  font-size: 30px;
+  line-height: 1.6;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38%;
+  padding: 25px 30px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8) 0px,
+    rgba(255, 255, 255, 0.8) 24px,
+    rgba(240, 220, 220, 0.5) 25px
+  ); /* giấy kẻ ngang nhẹ */
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(249, 182, 200, 0.6);
+  border: 1px solid rgba(255, 182, 193, 0.5);
+  text-align: left;
+  display: none;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* hiệu ứng mờ dần khi hiện ra */
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+} */
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  font-family: "Brittany", cursive;
+  text-align: center;
+  font-size: 20px;
+  color: #893f45;
+  opacity: 0.6;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Responsive cho điện thoại */
+/* @media (max-width: 768px) {
+  .message-text {
+    position: static;
+    transform: none;
+    width: 85%;
+    margin: 20px auto;
+    font-size: 18px;
+  }
+
+  .gift-options img {
+    width: 70px;
+    margin: 10px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+} */
